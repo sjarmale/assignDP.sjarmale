@@ -14,22 +14,25 @@ public class Facade {
 	public void beginFacade(){
 		System.out.println("Hello, Facade pattern begins");
 		userType= new Login().startLogin("SellerInfo.txt");
+		login();
 		System.out.println("Do you to see the meat menu or produce menu?");
 		Scanner sc = new Scanner(System.in);
 		String menuType = sc.nextLine();
-		if (menuType == "meat") {
+		if (menuType.equals("meat")) {
 			nProductCategory = 0;
-		} else if (menuType == "produce") {
+		} else if (menuType.equals("produce")) {
 			nProductCategory = 1;
 		}
+
+		//Demonstration of Bridge Design Pattern
 		if (userType == 1) {
-			Buyer buyer = new Buyer();
-			ProductMenu productMenu = buyer.CreateProductMenu();
-			buyer.showMenu();
+			Person buyer = new Buyer();
+			ProductMenu productMenu = buyer.CreateProductMenu(nProductCategory);
+			productMenu.showMenu();
 		} else {
 			Seller seller = new Seller();
-			seller.CreateProductMenu();
-			seller.showMenu();
+			ProductMenu productMenu = seller.CreateProductMenu(nProductCategory);
+			productMenu.showMenu();
 		}
 	}
 

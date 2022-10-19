@@ -1,15 +1,44 @@
-public abstract class ProduceProductMenu implements ProductMenu {
+import java.util.ArrayList;
 
-	public abstract void showMenu();
+public class ProduceProductMenu implements ProductMenu {
 
-	public abstract void showAddButton();
 
-	public abstract void showRadioButton();
+	public void showMenu() {
+		System.out.println("The meat products are as follows:");
+		for (String product : products) {
+			System.out.println("- " + product);
+		}
+	}
 
-	public abstract void showLabels();
+	@Override
+	public ArrayList<String> addItems(String itemName) {
+		ArrayList<String> newProducts = products;
+		newProducts.add(itemName);
+		return newProducts;
+	}
 
-	public abstract void showViewButtons();
+	@Override
+	public void showAddButton() {
 
-	public abstract void showComboxes();
+	}
 
+	@Override
+	public void showViewButton() {
+
+	}
+
+	@Override
+	public void showRadioButton() {
+
+	}
+
+	@Override
+	public void showLabels() {
+
+	}
+
+	@Override
+	public void showComboxes() {
+
+	}
 }

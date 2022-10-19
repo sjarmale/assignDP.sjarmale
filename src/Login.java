@@ -14,7 +14,7 @@ public class Login {
                 String newData[] = data.split(":");
                 String userName = newData[0];
                 String password = newData[1];
-                System.out.println("User Name is" + userName);
+                System.out.println("User Name is " + userName);
             }
             myReader.close();
         } catch (FileNotFoundException e) {

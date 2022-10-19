@@ -1,8 +1,14 @@
+import java.util.ArrayList;
+
 public interface ProductMenu {
 
 	Person person=null;
 
+	ArrayList<String> products = new ArrayList<>();
+
 	public abstract void showMenu();
+
+	public abstract ArrayList<String> addItems(String itemName);
 
 	public abstract void showAddButton();
 
