@@ -1,4 +1,5 @@
 public abstract class NodeVisitor {
+	private Reminder m_Reminder;
 
 	public abstract void visitProduct(Product product);
 

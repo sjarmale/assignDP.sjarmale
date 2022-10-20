@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Facade {
+public class Facade implements Reminder {
 
 	private int userType;
 
@@ -107,6 +107,12 @@ public class Facade {
 
 	public void remind() {
 
+	}
+
+	@Override
+	public int visit(Product product) {
+		System.out.println("All the objects of course is registered");
+		return 0;
 	}
 
 	public void createUser() {
