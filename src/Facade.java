@@ -44,6 +44,32 @@ public class Facade {
 		ProductMenuFactory productMenuFactory = new ProductMenuFactory();
 		ProductMenu productMenu = productMenuFactory.makeProductMenu(nProductCategory);
 		productMenu.showMenu();
+
+		// Demonstration of Iterator Design Pattern
+		ArrayList<String> products = new ArrayList<>();
+		try {
+			File myObj = new File("C:\\Users\\jarma\\IdeaProjects\\Design-Patterns-Siri\\src\\" + "ProductInfo.txt");
+			Scanner myReader = new Scanner(myObj);
+			while (myReader.hasNextLine()) {
+				String data = myReader.nextLine();
+				String newData[] = data.split(":");
+				String name = newData[1];
+				products.add(name);
+			}
+			myReader.close();
+		} catch (FileNotFoundException e) {
+			System.out.println("An error occurred.");
+			e.printStackTrace();
+		}
+		System.out.println();
+		System.out.println("Display all products using iterator design pattern... ");
+		ProductIterator productIterator = new ProductIterator(products);
+		productIterator.createIterator();
+		while(productIterator.hasNext()) {
+			productIterator.Next().forEach(
+					(key, value) -> System.out.println(key + " : " + value)
+			);
+		}
 	}
 
 
