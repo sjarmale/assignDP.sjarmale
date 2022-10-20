@@ -16,6 +16,11 @@ public class MeatProductMenu implements ProductMenu {
 		return newProducts;
 	}
 
+	@Override
+	public void showMenuIterator() {
+
+	}
+
 	public void showAddButton() {
 
 	}

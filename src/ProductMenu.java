@@ -10,6 +10,8 @@ public interface ProductMenu {
 
 	public abstract ArrayList<String> addItems(String itemName);
 
+	public abstract void showMenuIterator();
+
 	public abstract void showAddButton();
 
 	public abstract void showViewButton();

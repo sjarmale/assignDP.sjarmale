@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Facade {
@@ -24,16 +27,23 @@ public class Facade {
 			nProductCategory = 1;
 		}
 
-		//Demonstration of Bridge Design Pattern
+		// Demonstration of Bridge Design Pattern
 		if (userType == 1) {
-			Person buyer = new Buyer();
-			ProductMenu productMenu = buyer.CreateProductMenu(nProductCategory);
+			thePerson = new Buyer();
+			ProductMenu productMenu = thePerson.CreateProductMenu(nProductCategory);
 			productMenu.showMenu();
 		} else {
-			Seller seller = new Seller();
-			ProductMenu productMenu = seller.CreateProductMenu(nProductCategory);
+			thePerson = new Seller();
+			ProductMenu productMenu = thePerson.CreateProductMenu(nProductCategory);
 			productMenu.showMenu();
 		}
+
+		// Demonstration of Factory Design Pattern
+		System.out.println();
+		System.out.println("Factory Design Pattern... ");
+		ProductMenuFactory productMenuFactory = new ProductMenuFactory();
+		ProductMenu productMenu = productMenuFactory.makeProductMenu(nProductCategory);
+		productMenu.showMenu();
 	}
 
 

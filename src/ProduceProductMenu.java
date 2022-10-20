@@ -4,7 +4,7 @@ public class ProduceProductMenu implements ProductMenu {
 
 
 	public void showMenu() {
-		System.out.println("The meat products are as follows:");
+		System.out.println("The produce products are as follows:");
 		for (String product : products) {
 			System.out.println("- " + product);
 		}
@@ -15,6 +15,11 @@ public class ProduceProductMenu implements ProductMenu {
 		ArrayList<String> newProducts = products;
 		newProducts.add(itemName);
 		return newProducts;
+	}
+
+	@Override
+	public void showMenuIterator() {
+		System.out.println("New way to ");
 	}
 
 	@Override
