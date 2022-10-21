@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class MeatProductMenu implements ProductMenu {
 
+	//Concrete implementation of ProductMenu class to add and display products
 	public void showMenu() {
 		System.out.println("The meat products are as follows:");
 		for (String product : products) {

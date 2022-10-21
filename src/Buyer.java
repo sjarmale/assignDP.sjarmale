@@ -6,12 +6,14 @@ import java.lang.*;
 
 public class Buyer extends Person {
 
+	// Concrete implementation of Person abstract class
 	ArrayList<String> menuList = new ArrayList<String>();
 
 	public void showMenu() {
 		System.out.println();
 	}
 
+	//Product menu corresponding to the Buyer object
 	public ProductMenu CreateProductMenu(int productCategory) {
 		ProductMenu productMenu;
 		if (productCategory == 0) {

@@ -1,5 +1,7 @@
 public abstract class Person {
 
+	// Abstract class Person with the corresponding productMenu
+
 	private ProductMenu theProductMenu;
 
 //	private ProductMenu productMenu;

@@ -3,6 +3,7 @@ import java.util.HashMap;
 
 public class ProductIterator implements ListIterator {
 
+	// Concrete class ProductIterator of ListIterator to iterate through list of products
 	ArrayList<String> productMenu;
 
 	int maxSize = 10;

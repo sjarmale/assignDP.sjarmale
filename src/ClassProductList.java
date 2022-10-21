@@ -1,6 +1,6 @@
 public class ClassProductList {
 
-	private Product product;
+	Product product;
 
 	private ReminderVisitor reminderVisitor;
 

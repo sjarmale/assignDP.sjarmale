@@ -19,7 +19,7 @@ public class ProduceProductMenu implements ProductMenu {
 
 	@Override
 	public void showMenuIterator() {
-		System.out.println("New way to ");
+
 	}
 
 	@Override

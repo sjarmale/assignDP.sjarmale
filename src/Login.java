@@ -5,6 +5,7 @@ import java.io.File;
 public class Login {
     int userType=-1;
 
+    // Log user in using either SellerInfo or BuyerInfo
     public int startLogin(String textFile){
         try {
             File myObj = new File("C:\\Users\\jarma\\IdeaProjects\\Design-Patterns-Siri\\src\\" + textFile);

@@ -1,4 +1,5 @@
 public class ProductMenuFactory {
+    // Factory method to choose with MeatProductMenu and ProduceProductMenu
     public ProductMenu makeProductMenu(int productMenuType) {
         ProductMenu productMenu = null;
 

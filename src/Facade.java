@@ -11,7 +11,7 @@ public class Facade implements Reminder {
 
 	private int nProductCategory;
 
-	private ClassProductList theProductList;
+	ClassProductList theProductList;
 
 	private Person thePerson;
 	public void beginFacade(){
@@ -70,6 +70,15 @@ public class Facade implements Reminder {
 					(key, value) -> System.out.println(key + " : " + value)
 			);
 		}
+
+		//Demonstration of Visitor Design Pattern
+		ReminderVisitor reminderVisitor = new ReminderVisitor();
+
+		ClassProductList classProductList = new ClassProductList();
+		Trading trading = new Trading();
+
+		classProductList.accept(reminderVisitor);
+		trading.accept(reminderVisitor);
 	}
 
 
